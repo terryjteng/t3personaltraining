@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Top-rated personal training, nutrition, and massage therapy in Los Angeles. Achieve your fitness goals with custom programs and recovery plans."
+    />
+    <meta
+      name="keywords"
+      content="personal training Los Angeles, LA fitness coach, nutritionist, massage therapy, fitness recovery, movement tracking"
+    />
+    <meta name="author" content="Terry Teng" />
+    <title>T3 Personal Training – Los Angeles</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        AOS.init({
+          once: true, // ensure animations only run once
+          offset: 100, // triggers earlier
+        });
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <script>
+      VanillaTilt.init(document.querySelectorAll(".card"), {
+        max: 15,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.1,
+      });
+    </script>
+
+    <link rel="icon" href="T3_LogoOnly.png" />
+    <link rel="stylesheet" href="services.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img
+          src="T3_MainLogo.png"
+          alt="T3 Personal Training Logo"
+          class="logo-img"
+        />
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <header class="hero-section">
+      <div class="hero-text">
+        <h1 class="hero-headline">Training Tailored to Your Strengths</h1>
+        <p class="hero-subtext">
+          At T3 Personal Training, we specialize in
+          <strong>weightlifting</strong> for building strength and muscle. We
+          also offer expert coaching in <strong>calisthenics</strong> for
+          bodyweight mastery, <strong>aerobic conditioning</strong> for
+          endurance, and <strong>Muay Thai</strong> for powerful, high-intensity
+          cardio.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section class="location">
+        <h2>Where You Can Train</h2>
+        <div class="card-container">
+          <div class="service-detail card" onclick="openModal('modal-home')">
+            <h3>Home Workouts</h3>
+            <p>Train in your own space.</p>
+            <div class="icon">
+  <img src="fa-house-chimney" alt="Weightlifting Icon" />
+</div>
+          </div>
+
+          <div class="service-detail card" onclick="openModal('modal-gym')">
+            <h3>Gym Workouts</h3>
+            <p>Accomodations to a gym of your choice.</p>
+            <div class="icon">
+  <img src="icons/dumbbell.svg" alt="Weightlifting Icon" />
+</div>
+          </div>
+
+          <div class="service-detail card" onclick="openModal('modal-private')">
+            <h3>Private Studio</h3>
+            <p>Exclusive, distraction-free sessions.</p>
+          </div>
+
+          <div class="service-detail card" onclick="openModal('modal-park')">
+            <h3>Park Workouts</h3>
+            <p>Fresh-air, outdoor training.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="services-boarder-top"></section>
+
+      <section class="workout-type">
+        <h2>Workout Styles</h2>
+        <div class="card-container">
+          <div class="service-detail card" onclick="openModal('modal-weight')">
+            <h3>Weightlifting</h3>
+            <p>Strength & hypertrophy training.</p>
+          </div>
+
+          <div
+            class="service-detail card"
+            onclick="openModal('modal-calisthenics')"
+          >
+            <h3>Calisthenics</h3>
+            <p>Bodyweight strength and mobility.</p>
+          </div>
+
+          <div class="service-detail card" onclick="openModal('modal-cardio')">
+            <h3>Aerobic / Cardio</h3>
+            <p>Endurance & fat-burning routines.</p>
+          </div>
+
+          <div
+            class="service-detail card"
+            onclick="openModal('modal-muaythai')"
+          >
+            <h3>Muay Thai/Kickboxing</h3>
+            <p>Striking-based cardio & conditioning.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="services-boarder-bottom"></section>
+
+      <section class="nutrition">
+        <h2>Nutrition & Meal Planning</h2>
+        <div class="card-container">
+          <div class="service-detail card" onclick="openModal('modal-nutrition')">
+            <h3>Nutrition</h3>
+            <p>Nutritional plans and meal guides to fit your taste and fitness goals.</p>
+          </div>
+          
+          <div class="service-detail card" onclick="openModal('modal-meal-prep')">
+            <h3>Meal-Prep</h3>
+            <p>Custom weekly meals that match your workouts and tastes. </p>
+          </div> 
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- MODALS -->
+
+    <!-- Modal: Home Workouts -->
+    <div id="modal-home" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-home')">&times;</span>
+        <h2>Home Workouts</h2>
+        <p>
+          Enjoy personalized fitness coaching from the comfort of your own home.
+          We’ll guide you through custom routines using your bodyweight or
+          minimal equipment.
+        </p>
+      </div>
+    </div>
+
+    <!-- Modal: Gym Workouts -->
+    <div id="modal-gym" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-gym')">&times;</span>
+        <h2>Gym Workouts</h2>
+        <p>
+          Prefer to train at your own gym? We’ll work with your local gym setup
+          and help you make the most of your environment with a plan tailored to
+          your equipment access.
+        </p>
+      </div>
+    </div>
+
+    <!-- Modal: Private Studio -->
+    <div id="modal-private" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-private')">&times;</span>
+        <h2>Private Studio Workouts</h2>
+        <p>
+          Train in an exclusive studio space designed for privacy and focus.
+          Currently under development, this space will offer an intimate,
+          distraction-free workout experience.
+        </p>
+      </div>
+    </div>
+
+    <!-- Modal: Park Workouts -->
+    <div id="modal-park" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-park')">&times;</span>
+        <h2>Park Workouts</h2>
+        <p>
+          Get fit in the open air with nature as your backdrop. These fun and
+          energizing outdoor sessions are great for conditioning, calisthenics,
+          and agility training.
+        </p>
+      </div>
+    </div>
+
+    <!-- Modal: Weightlifting -->
+    <div id="modal-weight" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-weight')">&times;</span>
+        <h2>Weightlifting</h2>
+        <p>
+          Build muscle, increase strength, and enhance your performance with
+          custom strength training programs using barbells, dumbbells, and
+          resistance machines.
+        </p>
+      </div>
+    </div>
+
+    <!-- Modal: Calisthenics -->
+    <div id="modal-calisthenics" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-calisthenics')"
+          >&times;</span
+        >
+        <h2>Calisthenics</h2>
+        <p>
+          Master your body through push-ups, pull-ups, dips, and balance work.
+          Calisthenics improves strength, flexibility, and coordination using
+          your own bodyweight.
+        </p>
+      </div>
+    </div>
+
+    <!-- Modal: Aerobic / Cardio -->
+    <div id="modal-cardio" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-cardio')">&times;</span>
+        <h2>Aerobic / Cardio</h2>
+        <p>
+          Boost your endurance and cardiovascular health with routines like
+          running, HIIT, jump rope, and circuit-style exercises that get your
+          heart rate up.
+        </p>
+      </div>
+    </div>
+
+    <!-- Modal: Muay Thai / Kickboxing -->
+    <div id="modal-muaythai" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-muaythai')"
+          >&times;</span
+        >
+        <h2>Muay Thai / Kickboxing</h2>
+        <p>
+          Experience a fun and powerful way to burn calories and sharpen focus.
+          We combine cardio with striking techniques for a full-body,
+          high-intensity workout.
+        </p>
+      </div>
+    </div>
+
+    <!-- Modal: Nutrition -->
+<div id="modal-nutrition" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal-nutrition')">&times;</span>
+    <h2>Nutrition Guidance</h2>
+    <p>
+      Get expert help tailoring your nutrition plan to your goals. While certification is in progress, our recommendations are research-driven and personalized to your lifestyle, with a focus on realistic and sustainable change.
+    </p>
+  </div>
+</div>
+
+<!-- Modal: Meal Prep -->
+<div id="modal-meal-prep" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal-meal-prep')">&times;</span>
+    <h2>Meal Prep Service</h2>
+    <p>
+      Weekly meal plans are designed around your favorite foods and fitness objectives. Whether you're aiming to bulk, cut, or maintain, we’ll create delicious, goal-oriented options to keep you on track without feeling restricted.
+    </p>
+  </div>
+</div>
+
+
+    <footer>
+      <p>&copy; 2025 T3 Personal Training | Los Angeles, CA</p>
+    </footer>
+
+    <script src="services.js"></script>
+  </body>
+</html>
