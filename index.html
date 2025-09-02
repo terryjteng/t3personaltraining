@@ -2,210 +2,241 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>T3 Personal Training — Temporary Site</title>
     <meta
       name="description"
-      content="Top-rated personal training, nutrition, and massage therapy in Los Angeles. Achieve your fitness goals with custom programs and recovery plans."
+      content="Personal training in Los Angeles. Strength, calisthenics, cardio, Muay Thai-inspired conditioning, massage therapy, nutrition guidance, and meal prep available."
     />
-    <meta
-      name="keywords"
-      content="personal training Los Angeles, LA fitness coach, nutritionist, massage therapy, fitness recovery, movement tracking"
-    />
-    <meta name="author" content="Terry Teng" />
-    <title>T3 Personal Training – Los Angeles</title>
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        AOS.init({
-          once: true, // ensure animations only run once
-          offset: 100, // triggers earlier
-        });
-      });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
-    <script>
-      VanillaTilt.init(document.querySelectorAll(".card"), {
-        max: 15,
-        speed: 400,
-        glare: true,
-        "max-glare": 0.1,
-      });
-    </script>
 
-    <link rel="icon" href="T3_LogoOnly.png" />
+    <!-- Favicon / App Icons -->
+    <link rel="icon" type="image/png" href="T3_LogoOnly.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="T3_LogoOnly.png" />
+    <meta name="theme-color" content="#1d3557" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles: desktop/base first, mobile polish second -->
     <link rel="stylesheet" href="index.css" />
-
+    <link rel="stylesheet" href="mobile.css" />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="logo">
-        <img
-          src="T3_MainLogo.png"
-          alt="T3 Personal Training Logo"
-          class="logo-img"
-        />
+    <!-- Progress bar & toast (used by index.js) -->
+    <div id="scrollbar" aria-hidden="true"></div>
+    <div id="toast" role="status" aria-live="polite"></div>
+
+    <!-- Disclosure -->
+    <div class="disclosure" role="status" aria-live="polite">
+      <strong>Heads up:</strong> This is a <strong>temporary</strong> site — the
+      full T3 Personal Training website is currently being built.
+    </div>
+
+    <!-- Nav / Logo -->
+    <nav class="nav">
+      <div class="nav-inner">
+        <a class="brand" href="#top">
+          <img
+            class="main-logo"
+            src="T3_MainLogo.png"
+            alt="T3 Personal Training main logo"
+          />
+        </a>
+        <div class="spacer"></div>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
       </div>
-      <ul class="nav-links">
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
     </nav>
 
-    <header class="hero-section">
-      <div class="hero-text">
-        <h1 class="hero-headline">Our Training Services</h1>
-        <p class="hero-subtext">
-          Explore the full range of fitness programs we offer — whether at home,
-          in the gym, or outdoors.
+    <!-- Microproof  -->
+    <section class="microproof" aria-label="Fast facts">
+      <div>LA-based</div>
+      <div>Home Workouts</div>
+      <div>Private Gym</div>
+      <div>Flexible scheduling</div>
+    </section>
+
+    <!-- Hero -->
+    <header id="top" class="hero">
+      <div>
+        <h1>Strength. Consistency. Real-World Results.</h1>
+        <p>
+          Personal training in Los Angeles with programs for weightlifting,
+          calisthenics, aerobic conditioning, and Muay Thai-inspired cardio.
+          Nutrition guidance, weekly meal-prep planning, and massage therapy
+          (coming soon).
         </p>
+        <a class="cta btn btn-primary" href="#contact">Book a Free Consult</a>
+
+        <!-- Optional hero bullets (keep or remove) -->
+        <ul class="hero-points">
+          <li>Personal Training</li>
+          <li>Kickboxing/Muay Thai Conditioning</li>
+          <li>Meal-Prep Planning</li>
+          <li>Massage (coming soon)</li>
+        </ul>
       </div>
     </header>
 
-    <section class="services-section" id="services">
-      <h2 data-aos="fade-up">What We Offer</h2>
+    <!-- Services  -->
+    <section id="services" class="wrap">
+      <h2 class="section-title">What I Offer</h2>
 
-      <div class="single-card-row">
-        <div
-          class="card"
-          id="personal-trainer"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <div class="card-title-with-icon">
-            <div class="card-icon">
-              <img src="PTLogo.png" alt="Personal Training Icon" />
-            </div>
-            <h3>Personal Training</h3>
-          </div>
-          <p>
-            Customized fitness programs designed to match your goals, schedule,
-            and space.
-          </p>
-          <ul class="card-list">
-            <li>🏠 Home Workouts</li>
-            <li>🏋️‍♂️ Private Gym Space</li>
-            <li>🥊 Kickboxing Workouts</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="double-card-row">
-        <div class="card" data-aos="fade-up" data-aos-delay="200">
-          <div class="card-icon">
-            <img src="NutritionLogo.png" alt="Nutrition Icon" />
-          </div>
-          <h3>Nutrition Coaching</h3>
-          <p>
-            <strong>Certification in progress.</strong> Weekly meal plans
-            available now to support your training goals and energy levels.
-          </p>
-        </div>
-
-        <div
-          class="card"
-          id="coming-soon"
-          data-aos="fade-up"
-          data-aos-delay="300"
-        >
-          <div class="card-icon">
-            <img src="MassageLogo.png" alt="Massage Icon" />
-          </div>
-          <h3>Massage Therapy</h3>
-          <p>
-            <em
-              >Coming Soon: Therapeutic recovery services for optimal
-              performance.</em
-            >
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="about-section" id="about">
-      <h2 data-aos="fade-up">About</h2>
-      <div class="about-content">
-        <div class="about-text" data-aos="fade-right">
-          <p>
-            At T3 Training, we don’t just train bodies — we transform lives.
-            Whether you're an athlete pushing limits or someone just starting
-            their journey, we build programs that elevate your strength,
-            stamina, and mindset.
-          </p>
-
-          <p>
-            Our sessions are flexible and designed to meet you where you are —
-            literally. We offer private in-home training, outdoor sessions in
-            parks, and mobile workouts that bring professional coaching to your
-            doorstep. Whether it's resistance band conditioning, kickboxing
-            drills, or functional strength circuits, we make sure every workout
-            is personalized and efficient.
-          </p>
-
-          <p>
-            A private gym setup is currently in development — we are still able
-            to use this space but, stay tuned for exclusive updates to the space
-            and level ups. Until then, we can still bring the energy, equipment,
-            and expertise directly to you.
-          </p>
-
-          <p>
-            This is your path to lasting change — driven by consistency, built
-            on science, and guided by a coach who’s committed to unlocking your
-            full potential.
-          </p>
-        </div>
-        <div class="about-image" data-aos="fade-left">
-          <img
-            src="trainer-action.jpg"
-            alt="Personal trainer guiding client outdoors"
-          />
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-      <h2>Get Started</h2>
-      <p
-        style="
-          text-align: center;
-          font-size: 1.2rem;
-          max-width: 600px;
-          margin: 0 auto 2rem;
-        "
-      >
-        Ready to begin your transformation? Click below to fill out our intake
-        form and we'll get back to you within 24 hours.
+      <p class="lead">
+        Flexible sessions at home, outdoors, or your preferred gym — plus
+        guidance that makes staying consistent easier.
       </p>
-      <div style="text-align: center">
+
+      <div class="collage" aria-hidden="true">
+        
+        <img
+          src="/Users/terryteng/Downloads/PT Website/PT-Photos/Pose_MainPage.jpg"
+          alt="PosePicture"
+        />
+        <img
+          src="/Users/terryteng/Downloads/PT Website/PT-Photos/MT_MainPage - Edited - Edited.jpg"
+          alt="MuayThaiPicture"
+        />
+        <img
+          src="/Users/terryteng/Downloads/PT Website/PT-Photos/Weights_MainPage - Edited - Edited - Edited.jpg"
+          alt=""
+        />
+      </div>
+
+      <div class="grid" style="margin-top: 1.25rem">
+        <article class="card span-4">
+          <h3>Personal Training</h3>
+          <p>
+            Customized programs around your goals, schedule, and space. Options
+            for <strong>home workouts</strong>, <strong>park sessions</strong>,
+            or <strong>your gym</strong>.
+          </p>
+        </article>
+
+        <article class="card span-4">
+          <h3>
+            Nutrition Coaching <span class="muted">(cert in progress)</span>
+          </h3>
+          <p>
+            Evidence-informed guidance to support energy, performance, and
+            recovery — built for real life, not restrictions.
+          </p>
+        </article>
+
+        <article class="card span-4">
+          <h3>Meal-Prep Planning</h3>
+          <p>
+            Weekly meals made around your favorite foods and your workout goals
+            — simple, goal-aligned, and sustainable.
+          </p>
+        </article>
+      </div>
+
+      <div class="grid" style="margin-top: 1.25rem">
+        <article class="card span-4">
+          <h3>Muay Thai / Kickboxing Conditioning</h3>
+          <p>
+            High-intensity, striking-based cardio and technique for a fun way to
+            get leaner and build coordination.
+          </p>
+        </article>
+
+        <article class="card span-4">
+          <h3>Massage Therapy <span class="muted">(coming soon)</span></h3>
+          <p>
+            Relaxation and recovery-focused massage sessions to reduce soreness,
+            improve circulation, and support training results.
+          </p>
+        </article>
+
+        <article class="card span-4">
+          <h3>Private Studio <span class="muted">(available)</span></h3>
+          <p>
+            A distraction-free space now available for training sessions — being
+            upgraded with new equipment and amenities.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="wrap">
+      <h2 class="section-title">About T3</h2>
+      <div class="about">
+        <div>
+          <p class="lead">
+            Hi, I’m Terry — a lifelong fitness nerd turned coach. I study
+            training, nutrition, and recovery through trusted coaches, medical
+            researchers, and clinical studies so your plan is smart, safe, and
+            effective.
+          </p>
+          <p>
+            I work with 9-to-5ers, weekend warriors, and everyday athletes.
+            We’ll choose the training style that fits you best — from classic
+            lifting and calisthenics to aerobic work and Muay Thai-inspired
+            conditioning.
+          </p>
+          <p class="note">
+            * For combat-specific goals, I can refer you to trusted specialists
+            in my network.
+          </p>
+        </div>
+        <!-- Swap this placeholder for a relative image path in your project, e.g., images/trainer.jpg -->
+        <img
+          src="/Users/terryteng/Downloads/PT Website/PT-Photos/MainPage_Edited.png"
+          alt="Trainer photo"
+        />
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="wrap" style="padding-bottom: 3rem">
+      <h2 class="section-title">Start With a Free 30-Minute Consult</h2>
+      <p class="lead">
+        Tell me about your goals and schedule. I’ll recommend a plan and next
+        steps.
+      </p>
+
+      <div style="margin-top: 1rem">
         <a
+          class="cta btn btn-primary btn-fat"
           href="https://docs.google.com/forms/d/e/1FAIpQLScrRgv5In0vBZ8evR5dWAn5iG9RBrJj6JnEGplL6pCb-TF68A/viewform?usp=preview"
-          class="cta-button"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener"
+          >Fill Out the Intake Form</a
         >
-          Fill Out Form
-        </a>
       </div>
+
+      <div class="contact-row">
+        <a class="chip" href="mailto:t3.terrypt@gmail.com" id="emailLink"
+          >✉️ Email</a
+        >
+      </div>
+      <button
+        id="copyEmail"
+        type="button"
+        class="copy-btn"
+        aria-label="Copy email"
+      >
+        Copy Email
+      </button>
     </section>
 
-    <a href="#consultation" class="floating-cta">Free Consult</a>
-
-    <section id="consultation" class="consultation-section">
-      <h2>Free Consultation</h2>
-      <p>
-        Ready to take the first step toward better health? Let’s talk. Schedule
-        a free 30-minute consultation to discuss your goals and how we can help
-        you reach them.
-      </p>
-      <a href="#contact" class="cta-button">Schedule Now</a>
-    </section>
+    <!-- Sticky bottom CTA (mobile) -->
+    <a class="sticky-cta" href="#contact" aria-label="Book free consult"
+      >Book Free Consult</a
+    >
 
     <footer>
-      <p>&copy; 2025 T3 Personal Training | Los Angeles, CA</p>
+      <div class="foot">© 2025 T3 Personal Training • Los Angeles, CA</div>
     </footer>
 
+    <!-- Scripts: base JS first, then mobile behaviors -->
     <script src="index.js"></script>
+    <script src="mobile.js" defer></script>
   </body>
 </html>
