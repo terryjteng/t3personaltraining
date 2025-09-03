@@ -1,29 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>T3 Personal Training — Temporary Site</title>
-    <meta
-      name="description"
-      content="Personal training in Los Angeles. Strength, calisthenics, cardio, Muay Thai-inspired conditioning, massage therapy, nutrition guidance, and meal prep available."
-    />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Favicon / App Icons -->
-    <link rel="icon" type="image/png" href="T3_LogoOnly.png" sizes="32x32" />
-    <link rel="apple-touch-icon" href="T3_LogoOnly.png" />
-    <meta name="theme-color" content="#1d3557" />
+  <!-- Title & Description -->
+  <title>T3 Personal Training | Fitness Coaching in Los Angeles</title>
+  <meta
+    name="description"
+    content="T3 Personal Training in Los Angeles offers personal training, nutrition coaching, Muay Thai-inspired cardio, and meal prep planning to help you achieve real results."
+  />
+  <meta
+    name="keywords"
+    content="personal trainer Los Angeles, fitness coach LA, custom workouts, strength training, Muay Thai cardio, nutrition coaching, meal prep"
+  />
 
-    <!-- Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Favicon / App Icons -->
+  <link rel="icon" type="image/png" href="T3_LogoOnly.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="T3_LogoOnly.png" />
+  <meta name="theme-color" content="#1d3557" />
 
-    <!-- Styles: desktop/base first, mobile polish second -->
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="mobile.css" />
-  </head>
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="T3 Personal Training | Los Angeles Fitness Coaching" />
+  <meta property="og:description" content="Personal training, nutrition coaching, Muay Thai-inspired cardio, and meal prep planning designed around your goals." />
+  <meta property="og:image" content="https://t3personaltrainer.com/images/preview.jpg" />
+  <meta property="og:url" content="https://t3personaltrainer.com" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="T3 Personal Training | Los Angeles" />
+  <meta name="twitter:description" content="Custom fitness programs and nutrition coaching in LA. Book a free consult today!" />
+  <meta name="twitter:image" content="https://t3personaltrainer.com/images/preview.jpg" />
+
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="mobile.css" />
+
+  <!-- Schema Markup: Local Business -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "T3 Personal Training",
+    "image": "https://t3personaltrainer.com/T3_MainLogo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Los Angeles",
+      "addressRegion": "CA",
+      "postalCode": "90068",
+      "addressCountry": "US"
+    },
+    "url": "https://t3personaltrainer.com",
+    "priceRange": "$$",
+    "description": "Personal training, fitness coaching, nutrition guidance, Muay Thai cardio, and meal prep services in Los Angeles."
+  }
+  </script>
+</head>
+
   <body>
     <!-- Progress bar & toast (used by index.js) -->
     <div id="scrollbar" aria-hidden="true"></div>
@@ -95,15 +135,15 @@
         
         <img
           src="Pose_MainPage.jpg"
-          alt="PosePicture"
+          alt="Professional Pose Picture"
         />
         <img
           src="MT_MainPage - Edited - Edited.jpg"
-          alt="MuayThaiPicture"
+          alt="Muay Thai Picture"
         />
         <img
           src="Weights_MainPage - Edited - Edited - Edited.jpg"
-          alt=""
+          alt="Barbell weight training photo" 
         />
       </div>
 
