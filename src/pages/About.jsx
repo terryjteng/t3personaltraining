@@ -99,8 +99,6 @@ export default function About() {
                 src="/MainPage_Edited.png"
                 alt="Terry Teng, T3 Personal Training coach in Los Angeles"
                 loading="lazy"
-                width="360"
-                height="360"
               />
             </picture>
           </div>
