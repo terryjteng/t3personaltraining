@@ -1,0 +1,136 @@
+/* ── Hero ── */
+.nc-hero {
+  background: linear-gradient(135deg, var(--brand) 0%, #0d1f33 100%);
+  color: #fff;
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+}
+
+.nc-hero-content { max-width: 680px; margin: 0 auto; }
+
+.nc-hero-content h1 {
+  font-size: clamp(1.75rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  margin-bottom: .75rem;
+}
+
+.nc-hero-content p {
+  font-size: clamp(.95rem, 1.5vw, 1.1rem);
+  color: rgba(255,255,255,.82);
+  line-height: 1.7;
+}
+
+/* ── Steps ── */
+.nc-steps { padding-top: 3.5rem; padding-bottom: 3rem; }
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin: 2rem 0 2.5rem;
+}
+
+.step-card {
+  background: var(--card);
+  border: 1px solid #eaeef3;
+  border-radius: var(--radius-md);
+  padding: 1.75rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+  transition: box-shadow .18s, transform .18s;
+}
+
+.step-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.step-icon {
+  font-size: 1.75rem;
+  color: var(--accent);
+  margin-bottom: .25rem;
+}
+
+.step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px; height: 28px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: .85rem;
+  position: absolute;
+  top: 1.1rem; right: 1.25rem;
+}
+
+.step-card h3 {
+  font-size: 1rem;
+  color: var(--brand);
+  font-weight: 700;
+  margin: 0;
+}
+
+.step-card p {
+  font-size: .95rem;
+  color: #334155;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ── CTAs ── */
+.nc-ctas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  max-width: 520px;
+}
+
+.nc-ctas .btn { flex: 1; min-width: 200px; justify-content: center; }
+
+/* ── FAQ ── */
+.nc-faq {
+  background: var(--card);
+  border-top: 1px solid #eaeef3;
+  padding: 3.5rem 0;
+}
+
+.nc-faq .section-title { margin-bottom: 1.75rem; }
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.1rem;
+}
+
+.faq-card {
+  background: #fff;
+  border: 1px solid #eaeef3;
+  border-radius: var(--radius-md);
+  padding: 1.35rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-card h3 {
+  font-size: .98rem;
+  color: var(--brand);
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+
+.faq-card p {
+  font-size: .93rem;
+  color: #334155;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .nc-ctas { max-width: 100%; }
+  .nc-ctas .btn { min-width: unset; }
+}

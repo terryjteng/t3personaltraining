@@ -1,0 +1,104 @@
+/* ── Hero ── */
+.svc-hero {
+  background:
+    linear-gradient(rgba(13,31,51,.70), rgba(13,31,51,.70)),
+    image-set(
+      url('/hero-services.avif') type('image/avif'),
+      url('/Weights_MainPage.jpeg') type('image/jpeg')
+    ) center / cover no-repeat;
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+  color: #fff;
+}
+
+.svc-hero-content { max-width: 780px; margin: 0 auto; }
+
+.svc-hero-content h1 {
+  font-size: clamp(1.75rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: .2px;
+}
+
+.svc-hero-content p {
+  font-size: clamp(.95rem, 1.5vw, 1.15rem);
+  color: rgba(255,255,255,.82);
+  line-height: 1.75;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.svc-hero-content strong { color: #fff; font-weight: 700; }
+
+/* ── Section containers ── */
+.svc-main { padding: 0; }
+
+.svc-section {
+  padding: 4.5rem 1rem;
+}
+
+.svc-section:nth-child(odd)  { background: var(--card); }
+.svc-section:nth-child(even) { background: var(--bg); }
+
+.svc-section-title {
+  position: relative;
+  text-align: center;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 700;
+  color: var(--brand);
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+}
+
+.svc-section-title::after {
+  content: '';
+  position: absolute;
+  width: 48px; height: 3px;
+  background: var(--accent);
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* ── Card row ── */
+.svc-card-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── CTA ── */
+.svc-cta {
+  background: linear-gradient(135deg, var(--brand) 0%, #0d1f33 100%);
+  color: #fff;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.svc-cta-inner { max-width: 640px; margin: 0 auto; }
+
+.svc-cta h2 {
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  font-weight: 700;
+  margin-bottom: .75rem;
+}
+
+.svc-cta p {
+  color: rgba(255,255,255,.78);
+  margin-bottom: 1.75rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.svc-cta-btn {
+  padding: .9rem 2.25rem;
+  font-size: 1rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .svc-section { padding: 3rem 1rem; }
+}
