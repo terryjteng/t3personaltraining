@@ -214,11 +214,21 @@
 }
 .about-link { margin-top: .25rem; }
 
-.home-about-img picture,
-.home-about-img img {
+.home-about-img picture {
+  display: block;
   width: 100%;
+  aspect-ratio: 3 / 4;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.home-about-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 @media (max-width: 880px) {

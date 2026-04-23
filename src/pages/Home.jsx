@@ -198,8 +198,6 @@ export default function Home() {
                   src="/IMG_3824 - Edited.jpg"
                   alt="Terry Teng, T3 Personal Training coach"
                   loading="lazy"
-                  width="420"
-                  height="420"
                 />
               </picture>
             </div>
