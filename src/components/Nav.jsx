@@ -8,7 +8,6 @@ export default function Nav() {
   const [atTop,    setAtTop]      = useState(true)
   const lastY = useRef(0)
 
-  /* Hide nav on scroll-down, reveal on scroll-up */
   useEffect(() => {
     function onScroll() {
       const y = window.scrollY
@@ -20,16 +19,14 @@ export default function Nav() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  /* Close menu on resize past mobile breakpoint */
   useEffect(() => {
     function onResize() {
-      if (window.innerWidth > 640) setMenuOpen(false)
+      if (window.innerWidth > 768) setMenuOpen(false)
     }
     window.addEventListener('resize', onResize)
     return () => window.removeEventListener('resize', onResize)
   }, [])
 
-  /* Lock body scroll when menu is open */
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
@@ -56,7 +53,7 @@ export default function Nav() {
           <NavLink to="/services"       className={({ isActive }) => isActive ? 'active' : ''}>Services</NavLink>
           <NavLink to="/about"          className={({ isActive }) => isActive ? 'active' : ''}>About</NavLink>
           <NavLink to="/new-client"     className={({ isActive }) => isActive ? 'active' : ''}>New Client</NavLink>
-          <Link to="/#contact" className="nav-cta btn btn-primary">Book Free Consult</Link>
+          <a href="/#contact" className="nav-cta btn btn-primary">Book Free Consult</a>
         </div>
 
         {/* Hamburger */}
@@ -83,9 +80,9 @@ export default function Nav() {
         <NavLink to="/services"       onClick={close}>Services</NavLink>
         <NavLink to="/about"          onClick={close}>About</NavLink>
         <NavLink to="/new-client"     onClick={close}>New Client</NavLink>
-        <Link to="/#contact" onClick={close} className="mobile-cta btn btn-primary">
+        <a href="/#contact" onClick={close} className="mobile-cta btn btn-primary">
           Book Free Consult
-        </Link>
+        </a>
       </div>
 
       {/* Backdrop */}

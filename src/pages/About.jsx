@@ -129,7 +129,7 @@ export default function About() {
       <section className="about-cta wrap">
         <h2>Ready to get started?</h2>
         <p>Book a free 30-minute consult and we'll build your plan together.</p>
-        <Link to="/#contact" className="btn btn-primary">Book Free Consult</Link>
+        <a href="/#contact" className="btn btn-primary">Book Free Consult</a>
       </section>
     </div>
   )

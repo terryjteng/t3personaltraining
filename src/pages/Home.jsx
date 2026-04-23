@@ -42,7 +42,7 @@ const homeCards = [
     body: 'Weekly meals made around your favorite foods and your workout goals — simple, goal-aligned, and sustainable.' },
   { icon: 'fa-solid fa-hand-fist',   title: 'Muay Thai / Kickboxing',
     body: 'High-intensity, striking-based cardio and technique — a fun way to get leaner and build coordination.' },
-  { icon: 'fa-solid fa-spa',         title: <>Massage Therapy <span className="muted">(coming soon)</span></>,
+  { icon: 'fa-solid fa-spa',         title: 'Massage Therapy',
     body: 'Relaxation and recovery-focused massage to reduce soreness, improve circulation, and support your training.' },
   { icon: 'fa-solid fa-lock',        title: <>Private Studio <span className="muted">(available)</span></>,
     body: 'A distraction-free space now available for sessions — being upgraded with new equipment and amenities.' },
@@ -120,7 +120,7 @@ export default function Home() {
               <li>Personal Training</li>
               <li>Kickboxing / Muay Thai</li>
               <li>Meal-Prep Planning</li>
-              <li>Massage (coming soon)</li>
+              <li>Massage Therapy</li>
             </ul>
           </div>
 
@@ -193,9 +193,9 @@ export default function Home() {
             </div>
             <div className="home-about-img">
               <picture>
-                <source srcSet="/trainer.avif" type="image/avif" />
+                <source srcSet="/trainer2.avif" type="image/avif" />
                 <img
-                  src="/MainPage_Edited.png"
+                  src="/IMG_3824 - Edited.jpg"
                   alt="Terry Teng, T3 Personal Training coach"
                   loading="lazy"
                   width="420"

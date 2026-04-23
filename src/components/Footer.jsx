@@ -7,10 +7,7 @@ export default function Footer() {
       <div className="footer-body">
         <div className="footer-inner">
           <div className="footer-brand">
-            <picture>
-              <source srcSet="/logo.avif" type="image/avif" />
-              <img src="/T3_MainLogo.png" alt="T3 Personal Training" className="footer-logo" loading="lazy" />
-            </picture>
+            <span className="footer-brand-name">T3 Personal Training</span>
             <p>Real programs. Real results.<br />Los Angeles, CA</p>
           </div>
 
