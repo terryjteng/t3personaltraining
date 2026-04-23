@@ -52,9 +52,10 @@ export default function Nav() {
 
         {/* Desktop links */}
         <div className="nav-links" role="list">
-          <NavLink to="/"          end  className={({ isActive }) => isActive ? 'active' : ''}>Home</NavLink>
+          <NavLink to="/"           end className={({ isActive }) => isActive ? 'active' : ''}>Home</NavLink>
           <NavLink to="/services"       className={({ isActive }) => isActive ? 'active' : ''}>Services</NavLink>
           <NavLink to="/about"          className={({ isActive }) => isActive ? 'active' : ''}>About</NavLink>
+          <NavLink to="/new-client"     className={({ isActive }) => isActive ? 'active' : ''}>New Client</NavLink>
           <Link to="/#contact" className="nav-cta btn btn-primary">Book Free Consult</Link>
         </div>
 
